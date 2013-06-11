@@ -1,10 +1,13 @@
 <?php
 
 /**
+ * Class to convert camelCase to lower-case-hyphens and vice versa
+ *
  * @author    Rod Mcnew
  * @license   License.txt New BSD License
  */
-class CamelCaseConverter {
+class CamelCaseConverter
+{
     /*
      * Converts camelCase to lower-case-hyphens
      *
@@ -24,7 +27,8 @@ class CamelCaseConverter {
      *
      * @return string
      */
-    function hyphensToCamel($value){
+    function hyphensToCamel($value)
+    {
         return preg_replace("/\-(.)/e", "strtoupper('\\1')", $value);
     }
 }
